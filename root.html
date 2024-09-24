@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Electric Socket</title>
+    <link rel="stylesheet" href="css/root.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="grad"></div>
+    <div class="header">
+      <h1>Smart Electric Socket</h1>
+      <h2>Local Web Server Electrical Outlet Control</h2>
+    </div>
+
+    <div class="switch-container">
+      <h3 class="switch-title">Switch Controller</h3>
+      <div class="switch-grid">
+        <!-- Switch 1 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch1"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch1"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch1">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 1 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 2 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch2"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch2"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch2">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 2 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 3 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch3"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch3"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch3">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 3 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 4 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch4"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch4"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch4">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 4 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 5 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch5"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch5"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch5">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 5 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 6 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch6"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch6"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch6">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 6 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 7 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch7"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch7"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch7">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 7 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 8 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch8"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch8"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch8">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 8 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 9 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch9"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch9"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch9">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 9 <<<</span>
+          </label>
+        </div>
+
+        <!-- Switch 10 -->
+        <div class="onoffswitch">
+          <input
+            type="checkbox"
+            name="onoffswitch10"
+            class="onoffswitch-checkbox"
+            id="myonoffswitch10"
+          />
+          <label class="onoffswitch-label" for="myonoffswitch10">
+            <span class="onoffswitch-inner"></span>
+            <span class="onoffswitch-switch"></span>
+            <span class="switch-text">>>> Switch 10 <<<</span>
+          </label>
+        </div>
+      </div>
+
+      <button
+        class="logout"
+        id="logoutButton"
+        type="button"
+        onclick="location.href='index.html'"
+      >
+        <i class="fas fa-sign-out-alt"></i> EXIT
+      </button>
+    </div>
+
+    <script src="js/root.js"></script>
+    <script>
+      // Function to update switch status
+      function updateSwitch(switchNumber, status) {
+        const xhr = new XMLHttpRequest();
+        xhr.open(
+          "GET",
+          `update_switch.php?switch=${switchNumber}&status=${status}`,
+          true
+        );
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log(xhr.responseText); // Optional: log the response
+          }
+        };
+        xhr.send();
+      }
+
+      // Add event listeners to switches
+      const switches = document.querySelectorAll(".onoffswitch-checkbox");
+      switches.forEach((switchEl, index) => {
+        switchEl.addEventListener("change", function () {
+          const status = this.checked ? "on" : "off";
+          updateSwitch(index + 1, status); // index + 1 because switch numbers start from 1
+        });
+      });
+    </script>
+  </body>
+</html>

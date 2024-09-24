@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smart Electric Socket - Login</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="grad"></div>
+    <div class="header">
+      <h1>Smart Electric Socket</h1>
+      <span>>>> Login Page <<<</span>
+    </div>
+
+    <div class="login">
+      <form
+        class="form-signin"
+        id="loginForm"
+        action="php/login.php"
+        method="POST"
+      >
+        <input
+          type="text"
+          name="USERNAME"
+          id="username"
+          placeholder="Username"
+          class="form-control"
+          required
+        />
+        <input
+          type="password"
+          name="PASSWORD"
+          id="password"
+          placeholder="Password"
+          class="form-control"
+          required
+        />
+
+        <div class="remember-me">
+          <input type="checkbox" id="rememberMe" name="rememberMe" />
+          <label for="rememberMe">Selalu ingat saya</label>
+        </div>
+
+        <button type="submit" class="btn">CONNECT</button>
+      </form>
+
+      <!-- Pesan error jika login gagal -->
+      <p id="message"></p>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

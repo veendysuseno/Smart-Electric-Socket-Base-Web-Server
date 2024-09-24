@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #4a90e2, #9013fe);
+  color: #fff;
+}
+
+.grad {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.header h1 {
+  font-size: 2.5em;
+}
+
+.header h2 {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+.switch-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.switch-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+}
+
+.switch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.onoffswitch {
+  position: relative;
+  width: 100%;
+}
+
+.onoffswitch-checkbox {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+
+.onoffswitch-label {
+  display: block;
+  cursor: pointer;
+  user-select: none;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.onoffswitch-label:before {
+  content: "";
+  display: block;
+  width: 50%;
+  height: 100%;
+  background: #f00;
+  border-radius: 50px;
+  transition: all 0.3s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label {
+  background: #66bb6a;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label:before {
+  transform: translateX(100%);
+}
+
+.switch-text {
+  position: relative;
+  z-index: 2;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.logout {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff4c4c;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.logout:hover {
+  background-color: #ff1a1a;
+}
